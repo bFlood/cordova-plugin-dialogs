@@ -453,21 +453,21 @@ public class Notification extends CordovaPlugin {
     @SuppressLint("NewApi")
     private AlertDialog.Builder createDialog(CordovaInterface cordova) {
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        if (currentapiVersion >= android.os.Build.VERSION_CODES.HONEYCOMB) {
+        //if (currentapiVersion >= android.os.Build.VERSION_CODES.HONEYCOMB) {
             return new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
-        } else {
-            return new AlertDialog.Builder(cordova.getActivity());
-        }
+        //} else {
+            //return new AlertDialog.Builder(cordova.getActivity());
+        //}
     }
 
     @SuppressLint("InlinedApi")
     private ProgressDialog createProgressDialog(CordovaInterface cordova) {
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        if (currentapiVersion >= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+        //if (currentapiVersion >= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             return new ProgressDialog(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
-        } else {
-            return new ProgressDialog(cordova.getActivity());
-        }
+        //} else {
+        //    return new ProgressDialog(cordova.getActivity());
+        //}
     }
     
     @SuppressLint("NewApi")
