@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-package org.apache.cordova.dialogs;
+package plugin.sdlnotification;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
