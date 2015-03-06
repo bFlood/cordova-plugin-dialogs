@@ -33,14 +33,14 @@ module.exports = {
             message = 'Please wait...';
         }
 
-        exec(null, null, 'Notification', 'activityStart', [ title, message ]);
+        exec(null, null, 'SDLNotification', 'activityStart', [ title, message ]);
     },
 
     /**
      * Close an activity dialog
      */
     activityStop : function() {
-        exec(null, null, 'Notification', 'activityStop', []);
+        exec(null, null, 'SDLNotification', 'activityStop', []);
     },
 
     /**
@@ -52,14 +52,14 @@ module.exports = {
      *            message Message to display in the dialog.
      */
     progressStart : function(title, message) {
-        exec(null, null, 'Notification', 'progressStart', [ title, message ]);
+        exec(null, null, 'SDLNotification', 'progressStart', [ title, message ]);
     },
 
     /**
      * Close the progress dialog.
      */
     progressStop : function() {
-        exec(null, null, 'Notification', 'progressStop', []);
+        exec(null, null, 'SDLNotification', 'progressStop', []);
     },
 
     /**
@@ -69,6 +69,6 @@ module.exports = {
      *            value 0-100
      */
     progressValue : function(value) {
-        exec(null, null, 'Notification', 'progressValue', [ value ]);
+        exec(null, null, 'SDLNotification', 'progressValue', [ value ]);
     }
 };
