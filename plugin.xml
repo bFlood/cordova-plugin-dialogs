@@ -29,8 +29,8 @@
     <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git</repo>
     <issue>https://issues.apache.org/jira/browse/CB/component/12320642</issue>
 
-    <js-module src="www/notification.js" name="notification">
-        <merges  target="navigator.notification" />
+    <js-module src="www/notification.js" name="notification2">
+        <merges  target="navigator.notification2" />
     </js-module>
 
 
@@ -46,8 +46,8 @@
         <source-file src="src/android/Notification.java" target-dir="src/org/apache/cordova/dialogs" />
 
         <!-- android specific notification apis -->
-        <js-module src="www/android/notification.js" name="notification_android">
-            <merges target="navigator.notification" />
+        <js-module src="www/android/notification.js" name="notification_android2">
+            <merges target="navigator.notification2" />
         </js-module>
 
     </platform>
