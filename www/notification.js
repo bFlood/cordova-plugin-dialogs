@@ -39,7 +39,7 @@ module.exports = {
     alert: function(message, completeCallback, title, buttonLabel) {
         var _title = (title || "Alert");
         var _buttonLabel = (buttonLabel || "OK");
-        exec(completeCallback, null, "Notification", "alert", [message, _title, _buttonLabel]);
+        exec(completeCallback, null, "SDLNotification", "alert", [message, _title, _buttonLabel]);
     },
 
     /**
@@ -76,7 +76,7 @@ module.exports = {
                 _buttonLabels = buttonLabelArray.toString();
             }
         }
-        exec(resultCallback, null, "Notification", "confirm", [message, _title, _buttonLabels]);
+        exec(resultCallback, null, "SDLNotification", "confirm", [message, _title, _buttonLabels]);
     },
 
     /**
@@ -96,7 +96,7 @@ module.exports = {
         var _title = (title || "Prompt");
         var _buttonLabels = (buttonLabels || ["OK","Cancel"]);
         var _defaultText = (defaultText || "");
-        exec(resultCallback, null, "Notification", "prompt", [_message, _title, _buttonLabels, _defaultText]);
+        exec(resultCallback, null, "SDLNotification", "prompt", [_message, _title, _buttonLabels, _defaultText]);
     },
 
     /**
@@ -107,6 +107,6 @@ module.exports = {
      */
     beep: function(count) {
         var defaultedCount = count || 1;
-        exec(null, null, "Notification", "beep", [ defaultedCount ]);
+        exec(null, null, "SDLNotification", "beep", [ defaultedCount ]);
     }
 };
