@@ -162,7 +162,7 @@ public class SDLNotification extends CordovaPlugin {
 
                 AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
                 dlg.setMessage(message);
-                dlg.setTitle("X:" + title);
+                dlg.setTitle(title);
                 dlg.setCancelable(true);
                 dlg.setPositiveButton(buttonLabel,
                         new AlertDialog.OnClickListener() {
@@ -200,7 +200,7 @@ public class SDLNotification extends CordovaPlugin {
 
         Runnable runnable = new Runnable() {
             public void run() {
-                AlertDialog.Builder dlg = createDialog(cordova); // new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
                 dlg.setMessage(message);
                 dlg.setTitle(title);
                 dlg.setCancelable(true);
@@ -275,9 +275,9 @@ public class SDLNotification extends CordovaPlugin {
        
         Runnable runnable = new Runnable() {
             public void run() {
-                final EditText promptInput =  new EditText(cordova.getActivity());
+                final EditText promptInput =  new EditText(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
                 promptInput.setHint(defaultText);
-                AlertDialog.Builder dlg = createDialog(cordova); // new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+                AlertDialog.Builder dlg =  new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
                 dlg.setMessage(message);
                 dlg.setTitle(title);
                 dlg.setCancelable(true);
@@ -454,7 +454,7 @@ public class SDLNotification extends CordovaPlugin {
     private AlertDialog.Builder createDialog(CordovaInterface cordova) {
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
         //if (currentapiVersion >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-            return new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+            return new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
         //} else {
             //return new AlertDialog.Builder(cordova.getActivity());
         //}
@@ -464,7 +464,7 @@ public class SDLNotification extends CordovaPlugin {
     private ProgressDialog createProgressDialog(CordovaInterface cordova) {
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
         //if (currentapiVersion >= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            return new ProgressDialog(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+            return new ProgressDialog(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
         //} else {
         //    return new ProgressDialog(cordova.getActivity());
         //}
