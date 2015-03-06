@@ -364,7 +364,7 @@ public class SDLNotification extends CordovaPlugin {
             this.spinnerDialog.dismiss();
             this.spinnerDialog = null;
         }
-        final Notification notification = this;
+        final SDLNotification notification = this;
         final CordovaInterface cordova = this.cordova;
         Runnable runnable = new Runnable() {
             public void run() {
@@ -406,7 +406,7 @@ public class SDLNotification extends CordovaPlugin {
             this.progressDialog.dismiss();
             this.progressDialog = null;
         }
-        final Notification notification = this;
+        final SDLNotification notification = this;
         final CordovaInterface cordova = this.cordova;
         Runnable runnable = new Runnable() {
             public void run() {
