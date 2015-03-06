@@ -19,7 +19,7 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="org.apache.cordova.dialogs"
+           id="plugin.sdlnotification"
       version="0.3.1-dev">
 
     <name>Notification</name>
@@ -29,8 +29,8 @@
     <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git</repo>
     <issue>https://issues.apache.org/jira/browse/CB/component/12320642</issue>
 
-    <js-module src="www/notification.js" name="notification2">
-        <merges  target="navigator.notification2" />
+    <js-module src="www/sdlnotification.js" name="sdlnotification">
+        <clobbers  target="plugin.sdlnotification" />
     </js-module>
 
 
@@ -39,15 +39,15 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Notification">
-                <param name="android-package" value="org.apache.cordova.dialogs.Notification"/>
+                <param name="android-package" value="plugin.sdlnotification.Notification"/>
             </feature>
         </config-file>
 
         <source-file src="src/android/Notification.java" target-dir="src/org/apache/cordova/dialogs" />
 
         <!-- android specific notification apis -->
-        <js-module src="www/android/notification.js" name="notification_android2">
-            <merges target="navigator.notification2" />
+        <js-module src="www/android/sdlnotification.js" name="sdlnotification_android">
+            <merges target="plugin.sdlnotification" />
         </js-module>
 
     </platform>
