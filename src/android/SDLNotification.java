@@ -46,7 +46,7 @@ import android.widget.TextView;
  * implementation in org.apache.cordova.CordovaChromeClient that gets
  * called on a simple window.{alert|confirm|prompt}.
  */
-public class Notification extends CordovaPlugin {
+public class SDLNotification extends CordovaPlugin {
 
     public int confirmResult = -1;
     public ProgressDialog spinnerDialog = null;
@@ -55,7 +55,7 @@ public class Notification extends CordovaPlugin {
     /**
      * Constructor.
      */
-    public Notification() {
+    public SDLNotification() {
     }
 
     /**
