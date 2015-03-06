@@ -38,12 +38,12 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Notification">
-                <param name="android-package" value="plugin.sdlnotification.Notification"/>
+            <feature name="SDLNotification">
+                <param name="android-package" value="plugin.sdlnotification.SDLNotification"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/Notification.java" target-dir="src/org/apache/cordova/dialogs" />
+        <source-file src="src/android/SDLNotification.java" target-dir="src/org/apache/cordova/dialogs" />
 
         <!-- android specific notification apis -->
         <js-module src="www/android/sdlnotification.js" name="sdlnotification_android">
