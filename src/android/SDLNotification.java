@@ -275,7 +275,7 @@ public class SDLNotification extends CordovaPlugin {
        
         Runnable runnable = new Runnable() {
             public void run() {
-                final EditText promptInput =  new EditText(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
+                final EditText promptInput =  new EditText(cordova.getActivity());
                 promptInput.setHint(defaultText);
                 AlertDialog.Builder dlg =  new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_HOLO_LIGHT);
                 dlg.setMessage(message);
